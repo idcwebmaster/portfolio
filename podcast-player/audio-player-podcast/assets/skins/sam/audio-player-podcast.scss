@@ -1,0 +1,281 @@
+/************************
+Audio Player Podcast CSS
+************************/
+
+@import "compass";
+@import "shared/fonts";
+@import "shared/breakpoints";
+@import "shared/team-colors";
+.yui3-nflaudioplayerpodcast {
+font-size: 90.91%; /*10px*/
+/*width: 400px !important;*/
+/*height: 100px !important;*/
+width: 210px;
+height: 50px;
+font-family: NFLEndzoneSansCondMedium;
+color: #013369;
+padding-left: 0;
+}
+/*force font size if no scalable ui support*/
+.no-rgba .yui3-nflaudioplayerpodcast,
+.no-dataurl .yui3-nflaudioplayerpodcast,
+.no-cssgradients .yui3-nflaudioplayerpodcast { font-size: 10px;}
+
+
+.yui3-nflaudioplayerpodcast-content {position: relative;}
+.yui3-nflaudioplayerpodcast-display {
+position: relative;
+width: 100%; height: 50px;
+background: #e4e5e6;
+background: -moz-linear-gradient(top, #e6e7e8 0%, #cececf 94%, #9f9fa0 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e6e7e8), color-stop(94%,#cececf), color-stop(100%,#9f9fa0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #e6e7e8 0%, #cececf 94%, #9f9fa0 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #e6e7e8 0%, #cececf 94%, #9f9fa0 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #e6e7e8 0%, #cececf 94%, #9f9fa0 100%); /* IE10+ */
+background: linear-gradient(top, #e6e7e8 0%, #cececf 94%, #9f9fa0 100%); /* W3C */
+display: none;
+}
+.no-cssgradients .yui3-nflaudioplayerpodcast-display {background: url(audio-player-bg.png) repeat-x;}
+.yui3-nflaudioplayerpodcast-message {position: absolute; font-size: 24px; left: 10px; top: 10px; height: 30px; line-height: 30px;}
+.yui3-nflaudioplayerpodcast-channel-title {position: absolute; font-size: 20px; line-height: 20px; width: 263px; height: 20px; left: 114px; top: 6px; border-bottom: 2px solid #ced3d8; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.yui3-nflaudioplayerpodcast-title {position: absolute; font-size: 18px; line-height: 18px; width: 263px; height: 21px; left: 114px; top: 28px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+
+.yui3-nflaudioplayerpodcast-controls {
+position: relative;
+width: 100%; height: 50px;
+background: #e4e5e6;
+background: -moz-linear-gradient(top, #e6e7e8 0%, #9f9fa0 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e6e7e8), color-stop(100%,#9f9fa0)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #e6e7e8 0%, #9f9fa0 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #e6e7e8 0%, #9f9fa0 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #e6e7e8 0%, #9f9fa0 100%); /* IE10+ */
+background: linear-gradient(top, #e6e7e8 0%, #9f9fa0 100%); /* W3C */
+}
+.no-cssgradients .yui3-nflaudioplayerpodcast-controls {background: url(audio-player-bg.png) repeat-x 0 -50px;}
+
+.yui3-nflaudioplayerpodcast-playpause {
+position:absolute;
+top: 16px; left: 7px;
+width: 28px; height: 28px;
+cursor: pointer;
+}
+.yui3-nflaudioplayerpodcast-playpause-icon {
+width: 28px; height: 28px;
+background: url(audio-player.png) no-repeat;
+}
+.yui3-nflaudioplayerpodcast-playing .yui3-nflaudioplayerpodcast-playpause-icon { background-position: -29px 0;}
+.yui3-nflaudioplayerpodcast-rewind {
+position: absolute;
+top: 23px; left: 39px;
+width: 16px; height: 15px;
+background: url(audio-player.png) no-repeat -60px 0;
+cursor: pointer;
+}
+.yui3-nflaudioplayerpodcast-fastforward {
+position: absolute;
+top: 23px; right: 116px;
+width: 16px; height: 15px;
+background: url(audio-player.png) no-repeat -77px 0;
+cursor: pointer;
+display: none;
+}
+.yui3-nflaudioplayerpodcast-skip-start {
+position: absolute;
+top: 23px; left: 63px;
+width: 16px; height: 15px;
+background: url(audio-player.png) no-repeat -60px -16px;
+cursor: pointer;
+}
+.yui3-nflaudioplayerpodcast-skip-end {
+position: absolute;
+top: 23px; right: 139px;
+width: 14px; height: 15px;
+background: url(audio-player.png) no-repeat -75px -16px;
+cursor: pointer;
+display: none;
+}
+.yui3-nflaudioplayerpodcast-stop {
+position: absolute;
+top: 24px; right: 99px;
+width: 12px; height: 13px;
+background: url(audio-player.png) no-repeat -93px 0;
+cursor: pointer;
+display: none;
+}
+.yui3-nflaudioplayerpodcast-volume {
+position: absolute;
+top: 22px; right: 15px;
+/*right: 73px;*/
+width: 19px; height: 18px;
+background: url(audio-player.png) no-repeat -90px -14px;
+cursor: pointer;
+}
+.yui3-nflaudioplayerpodcast-volume-control {
+position: absolute;
+top: 40px; right: 71px;
+width: 126px; height: 31px;
+background: url(audio-player.png) no-repeat 0 -33px;
+}
+.yui3-nflaudioplayerpodcast-volume-control-hidden {display: none;}
+.yui3-nflaudioplayerpodcast-volume-slider {
+position: absolute;
+left: 14px; top: 18px;
+width: 97px; height: 5px; 
+background: #e7e7e7;
+background: -moz-linear-gradient(top, #909090 0%, #dedede 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#909090), color-stop(100%,#dedede)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #909090 0%, #dedede 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #909090 0%, #dedede 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #909090 0%, #dedede 100%); /* IE10+ */
+background: linear-gradient(top, #909090 0%, #dedede 100%); /* W3C */
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+}
+.yui3-nflaudioplayerpodcast-volume-bar {
+height: 100%; 
+background: #02386f;
+background: -moz-linear-gradient(top, #013369 0%, #033c79 85%, #4e8ad5 86%, #4e8ad5 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#013369), color-stop(85%,#033c79), color-stop(86%,#4e8ad5), color-stop(100%,#4e8ad5)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #013369 0%, #033c79 85%, #4e8ad5 86%, #4e8ad5 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #013369 0%, #033c79 85%, #4e8ad5 86%, #4e8ad5 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #013369 0%, #033c79 85%, #4e8ad5 86%, #4e8ad5 100%); /* IE10+ */
+background: linear-gradient(top, #013369 0%, #033c79 85%, #4e8ad5 86%, #4e8ad5 100%); /* W3C */
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+}
+.yui3-nflaudioplayerpodcast-volume-nub {
+position: absolute;
+top: -3px;
+width: 12px; height: 13px;
+background: url(audio-player.png) no-repeat -110px -19px;
+cursor: pointer;
+}
+.yui3-nflaudioplayerpodcast-details {
+position: absolute;
+top: 17px; right: 7px;
+width: 60px; height: 22px;
+background: url(audio-player.png) no-repeat -129px 0;
+cursor: pointer;
+display: none;
+}
+.yui3-nflaudioplayerpodcast-details-dropdown {
+position: absolute;
+top: 40px; right: 0;
+width: 145px; height: 147px;
+background: url(audio-player.png) no-repeat 0 -66px;
+padding-top: 10px;
+z-index: 1;
+}
+.yui3-nflaudioplayerpodcast-details-dropdown-hidden {display: none;}
+.yui3-nflaudioplayerpodcast-details-dropdown-item {
+display: block;
+height: 32px;
+line-height: 32px;
+font-size: 18px;
+color: #fff;
+text-decoration: none;
+border-bottom: 1px solid #346fb0;
+margin: 0 11px 0 15px;
+}
+.yui3-nflaudioplayerpodcast-details-dropdown>a{cursor: pointer;}
+.yui3-nflaudioplayerpodcast-details-dropdown-item:link,
+.yui3-nflaudioplayerpodcast-details-dropdown-item:active,
+.yui3-nflaudioplayerpodcast-details-dropdown-item:visited {color: #fff;}
+.yui3-nflaudioplayerpodcast-details-dropdown-item:hover {text-decoration: none !important;}
+.yui3-nflaudioplayerpodcast-details-dropdown-description,
+.yui3-nflaudioplayerpodcast-details-dropdown-description p {display: block !important; font: normal 8px/9px Arial,sans-serif !important; height: 30px; margin-top: 2px; margin-bottom: 2px; overflow: hidden;}
+.yui3-nflaudioplayerpodcast-details-dropdown-itunes {border-bottom: none;}
+.yui3-nflaudioplayerpodcast-details-dropdown-facebook-icon {
+display: inline-block;
+width: 60px; height: 20px;
+background: url(audio-player.png) no-repeat -129px -46px;
+float: right;
+margin-top: 6px;
+}
+.yui3-nflaudioplayerpodcast-details-dropdown-itunes-icon {
+display: inline-block;
+width: 58px; height: 24px;
+background: url(audio-player.png) no-repeat -129px -22px;
+float: right;
+margin-top: 6px;
+}
+
+.yui3-nflaudioplayerpodcast-progress {
+position: relative;
+left: 88px; top: 28px;
+/*width: 148px;*/
+width: 80px; height: 6px; 
+background: #fff;
+border: #ccc;
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+}
+.yui3-nflaudioplayerpodcast-progress-loading {
+position: absolute;
+height: 100%; 
+background: #7f7f7f;
+background: -moz-linear-gradient(top, #929292 0%, #7f7f7f 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#929292), color-stop(100%,#7f7f7f)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #929292 0%, #7f7f7f 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #929292 0%, #7f7f7f 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #929292 0%, #7f7f7f 100%); /* IE10+ */
+background: linear-gradient(top, #929292 0%, #7f7f7f 100%); /* W3C */
+border: #8b8b8b;
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+}
+.yui3-nflaudioplayerpodcast-progress-bar { 
+position: absolute;
+height: 100%; 
+background: #013369;
+border-radius: 3px;
+-webkit-border-radius: 3px;
+-moz-border-radius: 3px;
+-ms-border-radius: 3px;
+-o-border-radius: 3px;
+}
+.yui3-nflaudioplayerpodcast-progress-nub {
+position: absolute;
+top: -5px;
+width: 18px; height: 19px;
+background: url(audio-player.png) no-repeat -109px 0;
+cursor: pointer;
+}
+.yui3-nflaudioplayerpodcast-time {position: absolute; top: 7px; /*right: 168px;*/ right: 60px; font-size: 13px;}
+
+@include media-mobile-only-landscape{
+	.yui3-nflaudioplayerpodcast-progress{
+ 		width: 67%;
+ 	}
+ 	.yui3-nflaudioplayerpodcast-volume-control{
+ 		right: 10px;
+ 	}
+}
+@include media-mobile-only {
+ 	.yui3-nflaudioplayerpodcast{
+ 		width: 100%;
+ 	}
+ 	.yui3-nflaudioplayerpodcast-progress{
+ 		width: 60%;
+ 	}
+ 	.yui3-nflaudioplayerpodcast-time{
+ 		width: 40%;
+ 	}
+ 	.yui3-nflaudioplayerpodcast-volume-control{
+ 		right: 10px;
+ 	}	
+}
+
+

@@ -1,0 +1,9 @@
+/* Overthrow CSS:
+   Enable overflow: auto on elements with overthrow class when html element has overthrow-enabled class too */
+.overthrow-enabled .overthrow {
+    overflow: auto;
+}
+
+html.ios.overthrow-enabled .overthrow {
+     -webkit-overflow-scrolling: touch;
+}

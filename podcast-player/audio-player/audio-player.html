@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>untitled</title>
+</head>
+<body>
+	<div style="padding:1em">
+		<div id="audio-player"></div>
+		<div class="yui3-skin-micro" id="micro-player"></div>
+	</div>
+	<script>
+nfl.use("audio-player", function (Y) {
+	window.ap = new Y.NFLAudioPlayer({
+		url: "http://traffic.libsyn.com/richeisen/Jul14_Plaxico_Mora_Beadle-7-14-11.mp3",
+		render: "#audio-player"
+	});
+	window.ap2 = new Y.NFLAudioPlayer({
+		url: "http://traffic.libsyn.com/richeisen/Jul14_Plaxico_Mora_Beadle-7-14-11.mp3",
+		render: "#micro-player"
+	});	
+});
+	</script>
+</body>
+</html>
